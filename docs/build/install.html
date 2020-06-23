@@ -1,0 +1,591 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Installation &mdash; TensorFlow Installation Tutorial  documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/underscore.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+        <script type="text/javascript" src="_static/language_data.js"></script>
+        <script type="text/javascript" src="_static/sphinx_tabs/semantic-ui-2.4.1/tab.min.js"></script>
+        <script type="text/javascript" src="_static/sphinx_tabs/tabs.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/sphinx_tabs/semantic-ui-2.4.1/segment.min.css" type="text/css" />
+  <link rel="stylesheet" href="_static/sphinx_tabs/semantic-ui-2.4.1/menu.min.css" type="text/css" />
+  <link rel="stylesheet" href="_static/sphinx_tabs/semantic-ui-2.4.1/tab.min.css" type="text/css" />
+  <link rel="stylesheet" href="_static/sphinx_tabs/tabs.css" type="text/css" />
+  <link rel="stylesheet" href="_static/css/custom.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="TensorFlow Installation" href="index.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> TensorFlow Installation Tutorial
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Installation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#tensorflow-installation">TensorFlow Installation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#install-tensorflow-pip-package">Install TensorFlow pip package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#install-cuda-libraries-optional">Install CUDA libraries (Optional)</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#install-cuda-toolkit">Install CUDA Toolkit</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#install-cudnn">Install CUDNN</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#environment-setup">Environment Setup</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#verify-the-install">Verify the install</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#update-your-gpu-drivers-optional">Update your GPU drivers (Optional)</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#tensorflow-models-installation">TensorFlow Models Installation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#downloading-the-tensorflow-models">Downloading the TensorFlow Models</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#protobuf-installation-compilation">Protobuf Installation/Compilation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#adding-necessary-environment-variables">Adding necessary Environment Variables</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">TensorFlow Installation Tutorial</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+      <li>Installation</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/install.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="installation">
+<h1>Installation<a class="headerlink" href="#installation" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="tensorflow-installation">
+<h2>TensorFlow Installation<a class="headerlink" href="#tensorflow-installation" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="install-tensorflow-pip-package">
+<h3>Install TensorFlow pip package<a class="headerlink" href="#install-tensorflow-pip-package" title="Permalink to this headline">¶</a></h3>
+<ul>
+<li><p>Open a new <cite>Terminal</cite> window</p></li>
+<li><p>Once open, type the following on the command line:</p>
+<blockquote>
+<div><div class="highlight-posh notranslate"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="p">-</span><span class="n">-upgrade</span> <span class="n">tensorflow</span>
+</pre></div>
+</div>
+</div></blockquote>
+</li>
+<li><p>Verify the install:</p>
+<blockquote>
+<div><div class="highlight-posh notranslate"><div class="highlight"><pre><span></span><span class="n">python</span> <span class="n">-c</span> <span class="s2">&quot;import tensorflow as tf;print(tf.reduce_sum(tf.random.normal([1000, 1000])))&quot;</span>
+</pre></div>
+</div>
+<p>Once the above is run, you should see a print-out similar to the one bellow:</p>
+<div class="highlight-posh notranslate"><div class="highlight"><pre><span></span>2020-06-22 19:20:32.614181: W tensorflow/stream_executor/platform/default/dso_loader.cc:55] Could not load dynamic library &#39;cudart64_101.dll&#39;; dlerror: cudart64_101.dll not found
+2020-06-22 19:20:32.620571: I tensorflow/stream_executor/cuda/cudart_stub.cc:29] Ignore above cudart dlerror if you do not have a GPU set up on your machine.
+2020-06-22 19:20:35.027232: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library nvcuda.dll
+2020-06-22 19:20:35.060549: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1561] Found device 0 with properties:
+pciBusID: 0000:02:00.0 name: GeForce GTX 1070 Ti computeCapability: 6.1
+coreClock: 1.683GHz coreCount: 19 deviceMemorySize: 8.00GiB deviceMemoryBandwidth: 238.66GiB/s
+2020-06-22 19:20:35.074967: W tensorflow/stream_executor/platform/default/dso_loader.cc:55] Could not load dynamic library &#39;cudart64_101.dll&#39;; dlerror: cudart64_101.dll not found
+2020-06-22 19:20:35.084458: W tensorflow/stream_executor/platform/default/dso_loader.cc:55] Could not load dynamic library &#39;cublas64_10.dll&#39;; dlerror: cublas64_10.dll not found
+2020-06-22 19:20:35.094112: W tensorflow/stream_executor/platform/default/dso_loader.cc:55] Could not load dynamic library &#39;cufft64_10.dll&#39;; dlerror: cufft64_10.dll not found
+2020-06-22 19:20:35.103571: W tensorflow/stream_executor/platform/default/dso_loader.cc:55] Could not load dynamic library &#39;curand64_10.dll&#39;; dlerror: curand64_10.dll not found
+2020-06-22 19:20:35.113102: W tensorflow/stream_executor/platform/default/dso_loader.cc:55] Could not load dynamic library &#39;cusolver64_10.dll&#39;; dlerror: cusolver64_10.dll not found
+2020-06-22 19:20:35.123242: W tensorflow/stream_executor/platform/default/dso_loader.cc:55] Could not load dynamic library &#39;cusparse64_10.dll&#39;; dlerror: cusparse64_10.dll not found
+2020-06-22 19:20:35.140987: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library cudnn64_7.dll
+2020-06-22 19:20:35.146285: W tensorflow/core/common_runtime/gpu/gpu_device.cc:1598] Cannot dlopen some GPU libraries. Please make sure the missing libraries mentioned above are installed properly if you would like to use GPU. Follow the guide at https://www.tensorflow.org/install/gpu for how to download and setup the required libraries for your platform.
+Skipping registering GPU devices...
+2020-06-22 19:20:35.162173: I tensorflow/core/platform/cpu_feature_guard.cc:143] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2
+2020-06-22 19:20:35.178588: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x15140db6390 initialized for platform Host (this does not guarantee that XLA will be used). Devices:
+2020-06-22 19:20:35.185082: I tensorflow/compiler/xla/service/service.cc:176]   StreamExecutor device (0): Host, Default Version
+2020-06-22 19:20:35.191117: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1102] Device interconnect StreamExecutor with strength 1 edge matrix:
+2020-06-22 19:20:35.196815: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1108]
+tf.Tensor(1620.5817, shape=(), dtype=float32)
+</pre></div>
+</div>
+</div></blockquote>
+</li>
+</ul>
+</div>
+<div class="section" id="install-cuda-libraries-optional">
+<h3>Install CUDA libraries (Optional)<a class="headerlink" href="#install-cuda-libraries-optional" title="Permalink to this headline">¶</a></h3>
+<p>Although using a GPU to run TensorFlow is not necessary, the computational gains are substantial. Therefore, if your machine is equipped with a compatible CUDA-enabled GPU, it is recommended to follow the steps listed below to install the relevant libraries necessary to enable TensorFlow to make use of your GPU.</p>
+<p>By default, when TensorFlow is run it will attempt to register compatible GPU devices. If this fails, TensorFlow will resort to running on the platform’s CPU. This can also be observed in the printout shown in the previous section, under the “Verify the install” bullet-point, where there are a number of messages which report missing library files (e.g. <code class="docutils literal notranslate"><span class="pre">Could</span> <span class="pre">not</span> <span class="pre">load</span> <span class="pre">dynamic</span> <span class="pre">library</span> <span class="pre">'cudart64_101.dll';</span> <span class="pre">dlerror:</span> <span class="pre">cudart64_101.dll</span> <span class="pre">not</span> <span class="pre">found</span></code>).</p>
+<p>In order for TensorFlow to run on your GPU, the following requirements must be met:</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 100%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Prerequisites</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Nvidia GPU (GTX 650 or newer)</p></td>
+</tr>
+<tr class="row-odd"><td><p>CUDA Toolkit v10.1</p></td>
+</tr>
+<tr class="row-even"><td><p>CuDNN 7.6.5</p></td>
+</tr>
+</tbody>
+</table>
+<div class="section" id="install-cuda-toolkit">
+<span id="cuda-install"></span><h4>Install CUDA Toolkit<a class="headerlink" href="#install-cuda-toolkit" title="Permalink to this headline">¶</a></h4>
+<div class="sphinx-tabs docutils container">
+<div class="ui top attached tabular menu sphinx-menu docutils container">
+<div class="active item sphinx-data-tab-0-0 docutils container">
+<div class="docutils container">
+<p>Windows</p>
+</div>
+</div>
+<div class="item sphinx-data-tab-0-1 docutils container">
+<div class="docutils container">
+<p>Linux</p>
+</div>
+</div>
+</div>
+<div class="ui bottom attached sphinx-tab tab segment sphinx-data-tab-0-0 active docutils container">
+<ul class="simple">
+<li><p>Follow this <a class="reference external" href="https://developer.nvidia.com/cuda-10.1-download-archive-update2?target_os=Windows&amp;target_arch=x86_64&amp;target_version=10&amp;target_type=exenetwork">link</a> to download and install CUDA Toolkit 10.1</p></li>
+<li><p>Installation instructions can be found <a class="reference external" href="https://docs.nvidia.com/cuda/archive/10.1/cuda-installation-guide-microsoft-windows/index.html">here</a></p></li>
+</ul>
+</div>
+<div class="ui bottom attached sphinx-tab tab segment sphinx-data-tab-0-1 docutils container">
+<ul class="simple">
+<li><p>Follow this <a class="reference external" href="https://developer.nvidia.com/cuda-10.1-download-archive-update2?target_os=Linux&amp;target_arch=x86_64">link</a> to download and install CUDA Toolkit 10.1 for your Linux distribution.</p></li>
+<li><p>Installation instructions can be found <a class="reference external" href="https://docs.nvidia.com/cuda/archive/10.1/cuda-installation-guide-linux/index.html">here</a></p></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="section" id="install-cudnn">
+<span id="cudnn-install"></span><h4>Install CUDNN<a class="headerlink" href="#install-cudnn" title="Permalink to this headline">¶</a></h4>
+<div class="sphinx-tabs docutils container">
+<div class="ui top attached tabular menu sphinx-menu docutils container">
+<div class="active item sphinx-data-tab-1-0 docutils container">
+<div class="docutils container">
+<p>Windows</p>
+</div>
+</div>
+<div class="item sphinx-data-tab-1-1 docutils container">
+<div class="docutils container">
+<p>Linux</p>
+</div>
+</div>
+</div>
+<div class="ui bottom attached sphinx-tab tab segment sphinx-data-tab-1-0 active docutils container">
+<ul class="simple">
+<li><p>Go to <a class="reference external" href="https://developer.nvidia.com/rdp/cudnn-download">https://developer.nvidia.com/rdp/cudnn-download</a></p></li>
+<li><p>Create a user profile if needed and log in</p></li>
+<li><p>Select <a class="reference external" href="https://developer.nvidia.com/rdp/cudnn-download#a-collapse765-101">cuDNN v7.6.5 (Nov 5, 2019), for CUDA 10.1</a></p></li>
+<li><p>Download <a class="reference external" href="https://developer.nvidia.com/compute/machine-learning/cudnn/secure/7.6.5.32/Production/10.1_20191031/cudnn-10.1-windows10-x64-v7.6.5.32.zip">cuDNN v7.6.5 Library for Windows 10</a></p></li>
+<li><p>Extract the contents of the zip file (i.e. the folder named <code class="docutils literal notranslate"><span class="pre">cuda</span></code>) inside <code class="docutils literal notranslate"><span class="pre">&lt;INSTALL_PATH&gt;\NVIDIA</span> <span class="pre">GPU</span> <span class="pre">Computing</span> <span class="pre">Toolkit\CUDA\v10.1\</span></code>, where <code class="docutils literal notranslate"><span class="pre">&lt;INSTALL_PATH&gt;</span></code> points to the installation directory specified during the installation of the CUDA Toolkit. By default <code class="docutils literal notranslate"><span class="pre">&lt;INSTALL_PATH&gt;</span></code> = <code class="docutils literal notranslate"><span class="pre">C:\Program</span> <span class="pre">Files</span></code>.</p></li>
+</ul>
+</div>
+<div class="ui bottom attached sphinx-tab tab segment sphinx-data-tab-1-1 docutils container">
+<ul class="simple">
+<li><p>Go to <a class="reference external" href="https://developer.nvidia.com/rdp/cudnn-download">https://developer.nvidia.com/rdp/cudnn-download</a></p></li>
+<li><p>Create a user profile if needed and log in</p></li>
+<li><p>Select <a class="reference external" href="https://developer.nvidia.com/rdp/cudnn-download#a-collapse765-101">cuDNN v7.6.5 (Nov 5, 2019), for CUDA 10.1</a></p></li>
+<li><p>Download <a class="reference external" href="https://developer.nvidia.com/compute/machine-learning/cudnn/secure/7.6.5.32/Production/10.1_20191031/cudnn-10.1-linux-x64-v7.6.5.32.tgz">cuDNN v7.6.5 Library for Linux</a></p></li>
+<li><p>Follow the instructions under Section 2.3.1 of the <a class="reference external" href="https://docs.nvidia.com/deeplearning/sdk/cudnn-install/index.html#install-linux">CuDNN Installation Guide</a> to install CuDNN.</p></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="section" id="environment-setup">
+<span id="set-env"></span><h4>Environment Setup<a class="headerlink" href="#environment-setup" title="Permalink to this headline">¶</a></h4>
+<div class="sphinx-tabs docutils container">
+<div class="ui top attached tabular menu sphinx-menu docutils container">
+<div class="active item sphinx-data-tab-2-0 docutils container">
+<div class="docutils container">
+<p>Windows</p>
+</div>
+</div>
+<div class="item sphinx-data-tab-2-1 docutils container">
+<div class="docutils container">
+<p>Linux</p>
+</div>
+</div>
+</div>
+<div class="ui bottom attached sphinx-tab tab segment sphinx-data-tab-2-0 active docutils container">
+<ul>
+<li><p>Go to <cite>Start</cite> and Search “environment variables”</p></li>
+<li><p>Click “Edit the system environment variables”. This should open the “System Properties” window</p></li>
+<li><p>In the opened window, click the “Environment Variables…” button to open the “Environment Variables” window.</p></li>
+<li><p>Under “System variables”, search for and click on the <code class="docutils literal notranslate"><span class="pre">Path</span></code> system variable, then click “Edit…”</p></li>
+<li><p>Add the following paths, then click “OK” to save the changes:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">&lt;INSTALL_PATH&gt;\NVIDIA</span> <span class="pre">GPU</span> <span class="pre">Computing</span> <span class="pre">Toolkit\CUDA\v10.1\bin</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&lt;INSTALL_PATH&gt;\NVIDIA</span> <span class="pre">GPU</span> <span class="pre">Computing</span> <span class="pre">Toolkit\CUDA\v10.1\libnvvp</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&lt;INSTALL_PATH&gt;\NVIDIA</span> <span class="pre">GPU</span> <span class="pre">Computing</span> <span class="pre">Toolkit\CUDA\v10.1\extras\CUPTI\libx64</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&lt;INSTALL_PATH&gt;\NVIDIA</span> <span class="pre">GPU</span> <span class="pre">Computing</span> <span class="pre">Toolkit\CUDA\v10.1\cuda\bin</span></code></p></li>
+</ul>
+</div></blockquote>
+</li>
+</ul>
+</div>
+<div class="ui bottom attached sphinx-tab tab segment sphinx-data-tab-2-1 docutils container">
+<p>As per Section 7.1.1 of the <a class="reference external" href="https://docs.nvidia.com/deeplearning/sdk/cudnn-install/index.html#install-linux">CUDA Installation Guide for Linux</a>, append the following lines to <code class="docutils literal notranslate"><span class="pre">~/.bashrc</span></code>:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># CUDA related exports</span>
+<span class="nb">export</span> <span class="nv">PATH</span><span class="o">=</span>/usr/local/cuda-10.1/bin<span class="si">${</span><span class="nv">PATH</span><span class="p">:+:</span><span class="si">${</span><span class="nv">PATH</span><span class="si">}}</span>
+<span class="nb">export</span> <span class="nv">LD_LIBRARY_PATH</span><span class="o">=</span>/usr/local/cuda-10.1/lib64<span class="si">${</span><span class="nv">LD_LIBRARY_PATH</span><span class="p">:+:</span><span class="si">${</span><span class="nv">LD_LIBRARY_PATH</span><span class="si">}}</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="verify-the-install">
+<h4>Verify the install<a class="headerlink" href="#verify-the-install" title="Permalink to this headline">¶</a></h4>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>A new terminal window must be opened for the changes to the Environmental variables to take effect!!</p>
+</div>
+<p>As before, run the following command in a new <cite>Terminal</cite> window:</p>
+<div class="highlight-posh notranslate"><div class="highlight"><pre><span></span><span class="n">python</span> <span class="n">-c</span> <span class="s2">&quot;import tensorflow as tf;print(tf.reduce_sum(tf.random.normal([1000, 1000])))&quot;</span>
+</pre></div>
+</div>
+<p>Once the above is run, you should see a print-out similar to the one bellow:</p>
+<div class="highlight-posh notranslate"><div class="highlight"><pre><span></span><span class="hll">2020-06-22 20:24:31.355541: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library cudart64_101.dll
+</span><span class="hll">2020-06-22 20:24:33.650692: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library nvcuda.dll
+</span>2020-06-22 20:24:33.686846: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1561] Found device 0 with properties:
+pciBusID: 0000:02:00.0 name: GeForce GTX 1070 Ti computeCapability: 6.1
+coreClock: 1.683GHz coreCount: 19 deviceMemorySize: 8.00GiB deviceMemoryBandwidth: 238.66GiB/s
+<span class="hll">2020-06-22 20:24:33.697234: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library cudart64_101.dll
+</span><span class="hll">2020-06-22 20:24:33.747540: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library cublas64_10.dll
+</span><span class="hll">2020-06-22 20:24:33.787573: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library cufft64_10.dll
+</span><span class="hll">2020-06-22 20:24:33.810063: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library curand64_10.dll
+</span><span class="hll">2020-06-22 20:24:33.841474: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library cusolver64_10.dll
+</span><span class="hll">2020-06-22 20:24:33.862787: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library cusparse64_10.dll
+</span><span class="hll">2020-06-22 20:24:33.907318: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library cudnn64_7.dll
+</span>2020-06-22 20:24:33.913612: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1703] Adding visible gpu devices: 0
+2020-06-22 20:24:33.918093: I tensorflow/core/platform/cpu_feature_guard.cc:143] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2
+2020-06-22 20:24:33.932784: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x2382acc1c40 initialized for platform Host (this does not guarantee that XLA will be used). Devices:
+2020-06-22 20:24:33.939473: I tensorflow/compiler/xla/service/service.cc:176]   StreamExecutor device (0): Host, Default Version
+2020-06-22 20:24:33.944570: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1561] Found device 0 with properties:
+pciBusID: 0000:02:00.0 name: GeForce GTX 1070 Ti computeCapability: 6.1
+coreClock: 1.683GHz coreCount: 19 deviceMemorySize: 8.00GiB deviceMemoryBandwidth: 238.66GiB/s
+<span class="hll">2020-06-22 20:24:33.953910: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library cudart64_101.dll
+</span><span class="hll">2020-06-22 20:24:33.958772: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library cublas64_10.dll
+</span><span class="hll">2020-06-22 20:24:33.963656: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library cufft64_10.dll
+</span><span class="hll">2020-06-22 20:24:33.968210: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library curand64_10.dll
+</span><span class="hll">2020-06-22 20:24:33.973389: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library cusolver64_10.dll
+</span><span class="hll">2020-06-22 20:24:33.978058: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library cusparse64_10.dll
+</span><span class="hll">2020-06-22 20:24:33.983547: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library cudnn64_7.dll
+</span>2020-06-22 20:24:33.990380: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1703] Adding visible gpu devices: 0
+2020-06-22 20:24:35.338596: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1102] Device interconnect StreamExecutor with strength 1 edge matrix:
+2020-06-22 20:24:35.344643: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1108]      0
+2020-06-22 20:24:35.348795: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1121] 0:   N
+<span class="hll">2020-06-22 20:24:35.353853: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1247] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 6284 MB memory) -&gt; physical GPU (device: 0, name: GeForce GTX 1070 Ti, pci bus id: 0000:02:00.0, compute capability: 6.1)
+</span>2020-06-22 20:24:35.369758: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x2384aa9f820 initialized for platform CUDA (this does not guarantee that XLA will be used). Devices:
+2020-06-22 20:24:35.376320: I tensorflow/compiler/xla/service/service.cc:176]   StreamExecutor device (0): GeForce GTX 1070 Ti, Compute Capability 6.1
+tf.Tensor(122.478485, shape=(), dtype=float32)
+</pre></div>
+</div>
+<p>Notice from the lines highlighted above that the library files are now “Successfully opened” and a debugging message is presented to confirm that TensorFlow has successfully “Created TensorFlow device”.</p>
+</div>
+<div class="section" id="update-your-gpu-drivers-optional">
+<h4>Update your GPU drivers (Optional)<a class="headerlink" href="#update-your-gpu-drivers-optional" title="Permalink to this headline">¶</a></h4>
+<p>If during the installation of the CUDA Toolkit (see <a class="reference internal" href="#cuda-install"><span class="std std-ref">Install CUDA Toolkit</span></a>) you selected the <cite>Express Installation</cite> option, then your GPU drivers will have been overwritten by those that come bundled with the CUDA toolkit. These drivers are typically NOT the latest drivers and, thus, you may wish to updte your drivers.</p>
+<ul class="simple">
+<li><p>Go to <a class="reference external" href="http://www.nvidia.com/Download/index.aspx">http://www.nvidia.com/Download/index.aspx</a></p></li>
+<li><p>Select your GPU version to download</p></li>
+<li><p>Install the driver for your chosen OS</p></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="section" id="tensorflow-models-installation">
+<span id="tf-models-install"></span><h2>TensorFlow Models Installation<a class="headerlink" href="#tensorflow-models-installation" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="downloading-the-tensorflow-models">
+<h3>Downloading the TensorFlow Models<a class="headerlink" href="#downloading-the-tensorflow-models" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>Create a new folder under a path of your choice and name it <code class="docutils literal notranslate"><span class="pre">TensorFlow</span></code>. (e.g. <code class="docutils literal notranslate"><span class="pre">C:\Users\sglvladi\Documents\TensorFlow</span></code>).</p></li>
+<li><p>From your <cite>Terminal</cite> <code class="docutils literal notranslate"><span class="pre">cd</span></code> into the <code class="docutils literal notranslate"><span class="pre">TensorFlow</span></code> directory.</p></li>
+<li><p>To download the models you can either use <a class="reference external" href="https://git-scm.com/downloads">Git</a> to clone the <a class="reference external" href="https://github.com/tensorflow/models">TensorFlow Models repository</a> inside the <code class="docutils literal notranslate"><span class="pre">TensorFlow</span></code> folder, or you can simply download it as a <a class="reference external" href="https://github.com/tensorflow/models/archive/master.zip">ZIP</a> and extract its contents inside the <code class="docutils literal notranslate"><span class="pre">TensorFlow</span></code> folder. To keep things consistent, in the latter case you will have to rename the extracted folder <code class="docutils literal notranslate"><span class="pre">models-master</span></code> to <code class="docutils literal notranslate"><span class="pre">models</span></code>.</p></li>
+<li><p>You should now have a single folder named <code class="docutils literal notranslate"><span class="pre">models</span></code> under your <code class="docutils literal notranslate"><span class="pre">TensorFlow</span></code> folder, which contains another 3 folders as such:</p></li>
+</ul>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>TensorFlow
+└─ models
+    ├── community
+    ├── official
+    ├── research
+    └── ...
+</pre></div>
+</div>
+</div>
+<div class="section" id="protobuf-installation-compilation">
+<h3>Protobuf Installation/Compilation<a class="headerlink" href="#protobuf-installation-compilation" title="Permalink to this headline">¶</a></h3>
+<p>The Tensorflow Object Detection API uses Protobufs to configure model and
+training parameters. Before the framework can be used, the Protobuf libraries
+must be downloaded and compiled.</p>
+<p>This should be done as follows:</p>
+<ul>
+<li><p>Head to the <a class="reference external" href="https://github.com/google/protobuf/releases">protoc releases page</a></p></li>
+<li><p>Download the latest <code class="docutils literal notranslate"><span class="pre">protoc-*-*.zip</span></code> release (e.g. <code class="docutils literal notranslate"><span class="pre">protoc-3.11.0-win64.zip</span></code> for 64-bit Windows)</p></li>
+<li><p>Extract the contents of the downloaded <code class="docutils literal notranslate"><span class="pre">protoc-*-*.zip</span></code> in a directory <code class="docutils literal notranslate"><span class="pre">&lt;PATH_TO_PB&gt;</span></code> of your choice (e.g. <code class="docutils literal notranslate"><span class="pre">C:\Program</span> <span class="pre">Files\Google</span> <span class="pre">Protobuf</span></code>)</p></li>
+<li><p>Extract the contents of the downloaded <code class="docutils literal notranslate"><span class="pre">protoc-*-*.zip</span></code>, inside <code class="docutils literal notranslate"><span class="pre">C:\Program</span> <span class="pre">Files\Google</span> <span class="pre">Protobuf</span></code></p></li>
+<li><p>Add <code class="docutils literal notranslate"><span class="pre">&lt;PATH_TO_PB&gt;</span></code> to your <code class="docutils literal notranslate"><span class="pre">Path</span></code> environment variable (see <a class="reference internal" href="#set-env"><span class="std std-ref">Environment Setup</span></a>)</p></li>
+<li><p>In a new <cite>Terminal</cite> <a class="footnote-reference brackets" href="#id6" id="id5">1</a>, <code class="docutils literal notranslate"><span class="pre">cd</span></code> into <code class="docutils literal notranslate"><span class="pre">TensorFlow/models/research/</span></code> directory and run the following command:</p>
+<blockquote>
+<div><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># From within TensorFlow/models/research/</span>
+<span class="n">protoc</span> <span class="n">object_detection</span><span class="o">/</span><span class="n">protos</span><span class="o">/*.</span><span class="n">proto</span> <span class="o">--</span><span class="n">python_out</span><span class="o">=.</span>
+</pre></div>
+</div>
+</div></blockquote>
+</li>
+</ul>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>If you are on Windows and using Protobuf 3.5 or later, the multi-file selection wildcard (i.e <code class="docutils literal notranslate"><span class="pre">*.proto</span></code>) may not work but you can do one of the following:</p>
+<div class="sphinx-tabs docutils container">
+<div class="ui top attached tabular menu sphinx-menu docutils container">
+<div class="active item sphinx-data-tab-3-0 docutils container">
+<div class="docutils container">
+<p>Windows Powershell</p>
+</div>
+</div>
+<div class="item sphinx-data-tab-3-1 docutils container">
+<div class="docutils container">
+<p>Command Prompt</p>
+</div>
+</div>
+</div>
+<div class="ui bottom attached sphinx-tab tab segment sphinx-data-tab-3-0 active docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># From within TensorFlow/models/research/</span>
+<span class="n">Get</span><span class="o">-</span><span class="n">ChildItem</span> <span class="n">object_detection</span><span class="o">/</span><span class="n">protos</span><span class="o">/*.</span><span class="n">proto</span> <span class="o">|</span> <span class="n">foreach</span> <span class="p">{</span><span class="n">protoc</span> <span class="s2">&quot;object_detection/protos/$($_.Name)&quot;</span> <span class="o">--</span><span class="n">python_out</span><span class="o">=.</span><span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="ui bottom attached sphinx-tab tab segment sphinx-data-tab-3-1 docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># From within TensorFlow/models/research/</span>
+<span class="k">for</span> <span class="o">/</span><span class="n">f</span> <span class="o">%</span><span class="n">i</span> <span class="ow">in</span> <span class="p">(</span><span class="s1">&#39;dir /b object_detection\protos\*.proto&#39;</span><span class="p">)</span> <span class="n">do</span> <span class="n">protoc</span> <span class="n">object_detection</span>\<span class="n">protos</span>\<span class="o">%</span><span class="n">i</span> <span class="o">--</span><span class="n">python_out</span><span class="o">=.</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<dl class="footnote brackets">
+<dt class="label" id="id6"><span class="brackets"><a class="fn-backref" href="#id5">1</a></span></dt>
+<dd><p>NOTE: You MUST open a new <cite>Terminal</cite> for the changes in the environment variables to take effect.</p>
+</dd>
+</dl>
+</div>
+<div class="section" id="adding-necessary-environment-variables">
+<h3>Adding necessary Environment Variables<a class="headerlink" href="#adding-necessary-environment-variables" title="Permalink to this headline">¶</a></h3>
+<ol class="arabic">
+<li><p>Install the <code class="docutils literal notranslate"><span class="pre">Tensorflow\models\research\object_detection</span></code> package by running the following from <code class="docutils literal notranslate"><span class="pre">Tensorflow\models\research</span></code>:</p>
+<blockquote>
+<div><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># From within TensorFlow/models/research/</span>
+<span class="n">pip</span> <span class="n">install</span> <span class="o">.</span>
+</pre></div>
+</div>
+</div></blockquote>
+</li>
+<li><p>Add <cite>research/slim</cite> to your <code class="docutils literal notranslate"><span class="pre">PYTHONPATH</span></code>:</p></li>
+</ol>
+<div class="sphinx-tabs docutils container">
+<div class="ui top attached tabular menu sphinx-menu docutils container">
+<div class="active item sphinx-data-tab-4-0 docutils container">
+<div class="docutils container">
+<p>Windows</p>
+</div>
+</div>
+<div class="item sphinx-data-tab-4-1 docutils container">
+<div class="docutils container">
+<p>Linux</p>
+</div>
+</div>
+</div>
+<div class="ui bottom attached sphinx-tab tab segment sphinx-data-tab-4-0 active docutils container">
+<ul>
+<li><p>Go to <cite>Start</cite> and Search “environment variables”</p></li>
+<li><p>Click “Edit the system environment variables”. This should open the “System Properties” window</p></li>
+<li><p>In the opened window, click the “Environment Variables…” button to open the “Environment Variables” window.</p></li>
+<li><p>Under “System variables”, search for and click on the <code class="docutils literal notranslate"><span class="pre">PYTHONPATH</span></code> system variable,</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>If it exists then click “Edit…” and add <code class="docutils literal notranslate"><span class="pre">&lt;PATH_TO_TF&gt;\TensorFlow\models\research\slim</span></code> to the list</p></li>
+<li><p>If it doesn’t already exist, then click “New…”, under “Variable name” type <code class="docutils literal notranslate"><span class="pre">PYTHONPATH</span></code> and under “Variable value” enter <code class="docutils literal notranslate"><span class="pre">&lt;PATH_TO_TF&gt;\TensorFlow\models\research\slim</span></code></p></li>
+</ul>
+</div></blockquote>
+</li>
+<li><p>Then click “OK” to save the changes:</p></li>
+</ul>
+</div>
+<div class="ui bottom attached sphinx-tab tab segment sphinx-data-tab-4-1 docutils container">
+<p>The <a class="reference external" href="https://github.com/tensorflow/models/blob/master/research/object_detection/g3doc/installation.md">Installation docs</a> suggest that you either run, or add to <code class="docutils literal notranslate"><span class="pre">~/.bashrc</span></code> file, the following command, which adds these packages to your PYTHONPATH:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># From within tensorflow/models/research/</span>
+<span class="nb">export</span> <span class="nv">PYTHONPATH</span><span class="o">=</span><span class="nv">$PYTHONPATH</span>:&lt;PATH_TO_TF&gt;/TensorFlow/models/research/slim
+</pre></div>
+</div>
+</div>
+<p>where, in both cases, <code class="docutils literal notranslate"><span class="pre">&lt;PATH_TO_TF&gt;</span></code> replaces the absolute path to your <code class="docutils literal notranslate"><span class="pre">TesnorFlow</span></code> folder. (e.g. <code class="docutils literal notranslate"><span class="pre">&lt;PATH_TO_TF&gt;</span></code> = <code class="docutils literal notranslate"><span class="pre">C:\Users\sglvladi\Documents</span></code> if <code class="docutils literal notranslate"><span class="pre">TensorFlow</span></code> resides within your <code class="docutils literal notranslate"><span class="pre">Documents</span></code> folder)</p>
+</div>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+      
+        <a href="index.html" class="btn btn-neutral float-left" title="TensorFlow Installation" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2020, Lyudmil Vladimirov
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
