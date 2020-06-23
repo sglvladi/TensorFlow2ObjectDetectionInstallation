@@ -207,16 +207,16 @@ Downloading the TensorFlow Models
 - Create a new folder under a path of your choice and name it ``TensorFlow``. (e.g. ``C:\Users\sglvladi\Documents\TensorFlow``).
 - From your `Terminal` ``cd`` into the ``TensorFlow`` directory.
 - To download the models you can either use `Git <https://git-scm.com/downloads>`_ to clone the `TensorFlow Models repository <https://github.com/tensorflow/models>`_ inside the ``TensorFlow`` folder, or you can simply download it as a `ZIP <https://github.com/tensorflow/models/archive/master.zip>`_ and extract its contents inside the ``TensorFlow`` folder. To keep things consistent, in the latter case you will have to rename the extracted folder ``models-master`` to ``models``.
-- You should now have a single folder named ``models`` under your ``TensorFlow`` folder, which contains another 4 folders as such:
+- You should now have a single folder named ``models`` under your ``TensorFlow`` folder, which contains another 3 folders as such:
 
 .. code-block:: bash
 
     TensorFlow
     └─ models
+        ├── community
         ├── official
         ├── research
-        ├── samples
-        └── tutorials
+        └── ...
 
 Protobuf Installation/Compilation
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
