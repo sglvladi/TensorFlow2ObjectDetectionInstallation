@@ -551,6 +551,7 @@ must be downloaded and compiled.</p>
 </div>
 </div></blockquote>
 </li>
+<li><p>Download <a class="reference download internal" download="" href="_downloads/4a0ca30e9d535df516c09b026ceaa436/object_detection_tutorial.ipynb"><code class="xref download docutils literal notranslate"><span class="pre">this</span> <span class="pre">notebook</span></code></a> and paste it inside <code class="docutils literal notranslate"><span class="pre">TensorFlow\models\research\object_detection</span></code>.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">cd</span></code> into <code class="docutils literal notranslate"><span class="pre">TensorFlow\models\research\object_detection</span></code> and run the following command:</p>
 <blockquote>
 <div><div class="highlight-posh notranslate"><div class="highlight"><pre><span></span><span class="c"># From within TensorFlow/models/research/object_detection</span>
@@ -563,29 +564,10 @@ must be downloaded and compiled.</p>
 <li><p>Once there, simply follow <a class="reference external" href="https://youtu.be/COlbP62-B-U?t=7m23s">sentdex’s Youtube video</a> to ensure that everything is running smoothly.</p></li>
 <li><p>When done, your notebook should look similar to the image bellow:</p>
 <blockquote>
-<div><a class="reference internal image-reference" href="build/_static/object_detection_tutorial_output.PNG"><img alt="alternate text" class="align-center" src="build/_static/object_detection_tutorial_output.PNG" style="width: 90%;" /></a>
+<div><a class="reference internal image-reference" href="_images/object_detection_tutorial_output.png"><img alt="alternate text" class="align-center" src="_images/object_detection_tutorial_output.png" style="width: 90%;" /></a>
 </div></blockquote>
 </li>
 </ul>
-<div class="admonition important">
-<p class="admonition-title">Important</p>
-<ol class="arabic simple">
-<li><p>If no errors appear, but also no images are shown in the notebook, try adding <code class="docutils literal notranslate"><span class="pre">%matplotlib</span> <span class="pre">inline</span></code> at the start of the last cell, as shown by the highlighted text in the image bellow:</p></li>
-</ol>
-<a class="reference internal image-reference" href="build/_static/object_detection_tutorial_err.PNG"><img alt="alternate text" class="align-center" src="build/_static/object_detection_tutorial_err.PNG" style="width: 90%;" /></a>
-<ol class="arabic" start="2">
-<li><p>If Python crashes when running the last cell, have a look at the <cite>Terminal</cite> window you used to run <code class="docutils literal notranslate"><span class="pre">jupyter</span> <span class="pre">notebook</span></code> and check for an error similar (maybe identical) to the one below:</p>
-<blockquote>
-<div><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="mi">2018</span><span class="o">-</span><span class="mo">03</span><span class="o">-</span><span class="mi">22</span> <span class="mo">03</span><span class="p">:</span><span class="mo">07</span><span class="p">:</span><span class="mf">54.623130</span><span class="p">:</span> <span class="n">E</span> <span class="n">C</span><span class="p">:</span>\<span class="n">tf_jenkins</span>\<span class="n">workspace</span>\<span class="n">rel</span><span class="o">-</span><span class="n">win</span>\<span class="n">M</span>\<span class="n">windows</span><span class="o">-</span><span class="n">gpu</span>\<span class="n">PY</span>\<span class="mi">36</span>\<span class="n">tensorflow</span>\<span class="n">stream_executor</span>\<span class="n">cuda</span>\<span class="n">cuda_dnn</span><span class="o">.</span><span class="n">cc</span><span class="p">:</span><span class="mi">378</span><span class="p">]</span> <span class="n">Loaded</span> <span class="n">runtime</span> <span class="n">CuDNN</span> <span class="n">library</span><span class="p">:</span> <span class="mi">7101</span> <span class="p">(</span><span class="n">compatibility</span> <span class="n">version</span> <span class="mi">7100</span><span class="p">)</span> <span class="n">but</span> <span class="n">source</span> <span class="n">was</span> <span class="n">compiled</span> <span class="k">with</span> <span class="mi">7003</span> <span class="p">(</span><span class="n">compatibility</span> <span class="n">version</span> <span class="mi">7000</span><span class="p">)</span><span class="o">.</span>  <span class="n">If</span> <span class="n">using</span> <span class="n">a</span> <span class="n">binary</span> <span class="n">install</span><span class="p">,</span> <span class="n">upgrade</span> <span class="n">your</span> <span class="n">CuDNN</span> <span class="n">library</span> <span class="n">to</span> <span class="n">match</span><span class="o">.</span>  <span class="n">If</span> <span class="n">building</span> <span class="kn">from</span> <span class="nn">sources</span><span class="p">,</span> <span class="n">make</span> <span class="n">sure</span> <span class="n">the</span> <span class="n">library</span> <span class="n">loaded</span> <span class="n">at</span> <span class="n">runtime</span> <span class="n">matches</span> <span class="n">a</span> <span class="n">compatible</span> <span class="n">version</span> <span class="n">specified</span> <span class="n">during</span> <span class="nb">compile</span> <span class="n">configuration</span><span class="o">.</span>
-</pre></div>
-</div>
-<ul class="simple">
-<li><p>If the above line is present in the printed debugging, it means that you have not installed the correct version of the cuDNN libraries. In this case make sure you re-do the <a class="reference internal" href="#cudnn-install"><span class="std std-ref">Install CUDNN</span></a> step, making sure you instal cuDNN v7.6.5.</p></li>
-</ul>
-</div></blockquote>
-</li>
-</ol>
-</div>
 </div>
 </div>
 
