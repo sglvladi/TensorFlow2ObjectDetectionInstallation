@@ -45,7 +45,6 @@ Install TensorFlow pip package
         2020-06-22 19:20:35.196815: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1108]
         tf.Tensor(1620.5817, shape=(), dtype=float32)
 
-
 Install CUDA libraries (Optional)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 Although using a GPU to run TensorFlow is not necessary, the computational gains are substantial. Therefore, if your machine is equipped with a compatible CUDA-enabled GPU, it is recommended to follow the steps listed below to install the relevant libraries necessary to enable TensorFlow to make use of your GPU.
@@ -302,4 +301,47 @@ Adding necessary Environment Variables
     where, in both cases, ``<PATH_TO_TF>`` replaces the absolute path to your ``TesnorFlow`` folder. (e.g. ``<PATH_TO_TF>`` = ``C:\Users\sglvladi\Documents`` if ``TensorFlow`` resides within your ``Documents`` folder)
 
 
+Test your Installation
+----------------------
 
+- Open a new `Terminal` window
+- Install ``jupyter`` (if not done so already) by running:
+
+    .. code::
+
+        pip install jupyter
+
+- ``cd`` into ``TensorFlow\models\research\object_detection`` and run the following command:
+
+    .. code-block:: posh
+
+        # From within TensorFlow/models/research/object_detection
+        jupyter notebook
+
+- This should start a new ``jupyter notebook`` server on your machine and you should be redirected to a new tab of your default browser.
+
+- Once there, simply follow `sentdex's Youtube video <https://youtu.be/COlbP62-B-U?t=7m23s>`_ to ensure that everything is running smoothly.
+
+- When done, your notebook should look similar to the image bellow:
+
+    .. image:: ./_static/object_detection_tutorial_output.PNG
+       :width: 90%
+       :alt: alternate text
+       :align: center
+
+.. important::
+    1. If no errors appear, but also no images are shown in the notebook, try adding ``%matplotlib inline`` at the start of the last cell, as shown by the highlighted text in the image bellow:
+
+    .. image:: ./_static/object_detection_tutorial_err.PNG
+       :width: 90%
+       :alt: alternate text
+       :align: center
+
+
+    2. If Python crashes when running the last cell, have a look at the `Terminal` window you used to run ``jupyter notebook`` and check for an error similar (maybe identical) to the one below:
+
+        .. code-block:: python
+
+            2018-03-22 03:07:54.623130: E C:\tf_jenkins\workspace\rel-win\M\windows-gpu\PY\36\tensorflow\stream_executor\cuda\cuda_dnn.cc:378] Loaded runtime CuDNN library: 7101 (compatibility version 7100) but source was compiled with 7003 (compatibility version 7000).  If using a binary install, upgrade your CuDNN library to match.  If building from sources, make sure the library loaded at runtime matches a compatible version specified during compile configuration.
+
+        - If the above line is present in the printed debugging, it means that you have not installed the correct version of the cuDNN libraries. In this case make sure you re-do the :ref:`cudnn_install` step, making sure you instal cuDNN v7.6.5.
