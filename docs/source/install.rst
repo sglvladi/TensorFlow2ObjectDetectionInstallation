@@ -324,7 +324,7 @@ Test your Installation
 
 - When done, your notebook should look similar to the image bellow:
 
-    .. image:: ./_static/object_detection_tutorial_output.PNG
+    .. image:: _static/object_detection_tutorial_output.png
        :width: 90%
        :alt: alternate text
        :align: center
@@ -332,7 +332,7 @@ Test your Installation
 .. important::
     1. If no errors appear, but also no images are shown in the notebook, try adding ``%matplotlib inline`` at the start of the last cell, as shown by the highlighted text in the image bellow:
 
-    .. image:: ./_static/object_detection_tutorial_err.PNG
+    .. image:: _static/object_detection_tutorial_err.png
        :width: 90%
        :alt: alternate text
        :align: center
